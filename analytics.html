@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics — GalleryHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="particles"></div>
+  <div id="site-header"></div>
+  <main class="page-wrapper page-enter" id="analytics-dashboard">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <h1>📊 Analytics Dashboard</h1>
+            <p class="section-subtitle">Gallery performance and activity insights</p>
+          </div>
+        </div>
+
+        <div id="analytics-stats" class="stats-grid reveal"></div>
+
+        <div class="analytics-charts reveal">
+          <div class="chart-card glass-card">
+            <h3>Category Views</h3>
+            <div id="bar-chart"></div>
+          </div>
+          <div class="chart-card glass-card">
+            <h3>Category Distribution</h3>
+            <div class="pie-chart-wrap">
+              <div id="pie-chart" class="pie-chart"></div>
+              <div id="pie-legend" class="pie-legend"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="analytics-charts reveal mt-2">
+          <div class="chart-card glass-card">
+            <h3>Top Categories</h3>
+            <div id="progress-widgets"></div>
+          </div>
+          <div class="chart-card glass-card">
+            <h3>Recent Activity</h3>
+            <div id="activity-timeline" class="activity-timeline"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <div id="site-modals"></div>
+  <script src="js/app.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/themes.js"></script>
+</body>
+</html>

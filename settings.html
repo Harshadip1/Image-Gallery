@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — GalleryHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="particles"></div>
+  <div id="site-header"></div>
+  <main class="page-wrapper page-enter">
+    <section class="section">
+      <div class="container">
+        <h1 class="reveal mb-2">Settings</h1>
+        <div class="settings-layout">
+          <nav class="settings-nav glass-card reveal" style="padding:1rem">
+            <a href="#appearance" class="settings-nav-item active">Appearance</a>
+            <a href="#gallery" class="settings-nav-item">Gallery</a>
+            <a href="#slideshow" class="settings-nav-item">Slideshow</a>
+            <a href="#accessibility" class="settings-nav-item">Accessibility</a>
+          </nav>
+          <form id="settings-form" class="settings-panel glass-card reveal">
+            <h2 id="appearance" class="mb-2">Appearance</h2>
+            <div class="setting-row">
+              <div>
+                <strong>Theme</strong>
+                <p style="color:var(--text-secondary);font-size:0.85rem">Dark or light mode</p>
+              </div>
+              <select id="setting-theme" class="form-select" style="width:auto">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <div>
+                <strong>Accent Color</strong>
+              </div>
+              <select id="setting-accent" class="form-select" style="width:auto">
+                <option value="cyan">Cyan</option>
+                <option value="green">Green</option>
+                <option value="orange">Orange</option>
+                <option value="pink">Pink</option>
+                <option value="blue">Blue</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <div>
+                <strong>Language</strong>
+              </div>
+              <select id="setting-language" class="lang-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ja">日本語</option>
+              </select>
+            </div>
+
+            <h2 id="gallery" class="mb-2 mt-3">Gallery</h2>
+            <div class="setting-row">
+              <div><strong>Lazy Loading</strong></div>
+              <label class="toggle"><input type="checkbox" id="setting-lazyload" checked /><span class="toggle-slider"></span></label>
+            </div>
+            <div class="setting-row">
+              <div><strong>Watermark on Download</strong></div>
+              <label class="toggle"><input type="checkbox" id="setting-watermark" /><span class="toggle-slider"></span></label>
+            </div>
+            <div class="setting-row">
+              <div><strong>Offline Viewing Mode</strong></div>
+              <label class="toggle"><input type="checkbox" id="setting-offline" /><span class="toggle-slider"></span></label>
+            </div>
+            <div class="setting-row">
+              <div><strong>Wallpaper Mode</strong></div>
+              <button type="button" id="wallpaper-mode-btn" class="btn btn-secondary btn-sm">Toggle</button>
+            </div>
+
+            <h2 id="slideshow" class="mb-2 mt-3">Slideshow</h2>
+            <div class="setting-row">
+              <div><strong>Ken Burns Effect</strong></div>
+              <label class="toggle"><input type="checkbox" id="setting-kenburns" checked /><span class="toggle-slider"></span></label>
+            </div>
+
+            <h2 id="accessibility" class="mb-2 mt-3">Accessibility</h2>
+            <div class="setting-row">
+              <div><strong>Reduced Motion</strong></div>
+              <label class="toggle"><input type="checkbox" id="setting-reduced-motion" /><span class="toggle-slider"></span></label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <div id="site-modals"></div>
+  <script src="js/app.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/themes.js"></script>
+</body>
+</html>

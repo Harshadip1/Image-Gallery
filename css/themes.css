@@ -1,0 +1,65 @@
+/* ============================================
+   Theme Variations & Accent Overrides
+   ============================================ */
+
+[data-theme="light"] .gallery-card {
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .lightbox-backdrop {
+  background: rgba(241, 245, 249, 0.95);
+}
+
+[data-theme="light"] .gallery-card-overlay {
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.7) 0%, transparent 50%);
+}
+
+[data-accent="cyan"] {
+  --accent: #06B6D4;
+  --accent-light: #22D3EE;
+}
+
+[data-accent="green"] {
+  --accent: #22C55E;
+  --accent-light: #4ADE80;
+}
+
+[data-accent="orange"] {
+  --accent: #F59E0B;
+  --accent-light: #FBBF24;
+}
+
+[data-accent="pink"] {
+  --accent: #EC4899;
+  --accent-light: #F472B6;
+}
+
+[data-accent="blue"] {
+  --accent: #3B82F6;
+  --accent-light: #60A5FA;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .particle {
+    display: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --glass-border: rgba(248, 250, 252, 0.4);
+  }
+
+  .glass-card,
+  .site-header {
+    border-width: 2px;
+  }
+}

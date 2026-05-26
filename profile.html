@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — GalleryHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="particles"></div>
+  <div id="site-header"></div>
+  <main class="page-wrapper page-enter">
+    <section class="section">
+      <div class="container">
+        <div class="profile-header glass-card reveal">
+          <div class="profile-avatar">G</div>
+          <div>
+            <h1>Gallery Contributor</h1>
+            <p style="color:var(--text-secondary)">Visual creator · Photography enthusiast</p>
+            <div class="profile-stats mt-2">
+              <div class="profile-stat">
+                <div class="profile-stat-value" id="profile-images">0</div>
+                <div class="profile-stat-label">Images</div>
+              </div>
+              <div class="profile-stat">
+                <div class="profile-stat-value" id="profile-favorites">0</div>
+                <div class="profile-stat-label">Favorites</div>
+              </div>
+              <div class="profile-stat">
+                <div class="profile-stat-value" id="profile-collections">0</div>
+                <div class="profile-stat-label">Collections</div>
+              </div>
+            </div>
+            <div class="mt-2 flex gap-1 flex-wrap">
+              <a href="upload.html" class="btn btn-primary">Upload</a>
+              <a href="settings.html" class="btn btn-secondary">Settings</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-header reveal mt-3">
+          <h2>My Uploads</h2>
+        </div>
+        <div id="gallery-grid" class="masonry-grid reveal"></div>
+
+        <div class="section-header reveal mt-3">
+          <h2>Community Feed</h2>
+        </div>
+        <div id="community-feed" class="community-feed reveal"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <div id="site-modals"></div>
+  <script src="js/app.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/themes.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const uploads = GalleryApp.getImages().filter(i => i.url?.startsWith('data:'));
+      const grid = document.getElementById('gallery-grid');
+      Gallery.renderGrid(grid, uploads.length ? uploads : GalleryApp.getImages().slice(0, 6));
+      document.getElementById('profile-images').textContent = GalleryApp.getImages().length;
+      document.getElementById('profile-favorites').textContent = GalleryApp.getFavorites().length;
+      document.getElementById('profile-collections').textContent = GalleryApp.getCollections().length;
+    });
+  </script>
+</body>
+</html>
